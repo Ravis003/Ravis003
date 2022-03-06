@@ -1,0 +1,27 @@
+pipeline{
+   agent{
+         any
+}
+   stages{
+         stage('Commit')  {
+         	steps{
+                	echo "This is Code Download from GIT Project Repository.................."
+         } 
+         stage('Build') {
+	        steps{ 
+       		        echo "This is Build project using maven.................."
+         } 
+         stage('Test') {
+                 steps{
+       			 echo "This is Test project Implementation using Selenium................."
+         }
+   	 stage('Release') {
+                  steps{
+                          echo "This is Delivery using Dcoker......................................"
+         }
+         stage('Monitor') {
+		  steps{
+			   echo "This is Application Logs Monitorinig using tool Splunk............."
+        }
+        }
+}
